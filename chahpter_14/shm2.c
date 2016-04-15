@@ -4,6 +4,7 @@
 #include <string.h>
 
 #include <sys/shm.h>
+
 #include "shm_com.h"
 
 int main()
@@ -44,7 +45,7 @@ int main()
             running = 0;
         }
     }
-    
+
     if (shmdt(shared_memory) == -1) {
         fprintf(stderr, "shmdt failed\n");
         exit(EXIT_FAILURE);
